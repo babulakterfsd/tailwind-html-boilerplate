@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-html-boilerplate",
+  "version": "1.0.0",
+  "description": "A quick starter for any html site with tailwindcss (v 3.0.0).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./assets/styles/src/tailwind.css -o ./assets/styles/output/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babulakterfsd/tailwind-html-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babulakterfsd/tailwind-html-boilerplate/issues"
+  },
+  "homepage": "https://github.com/babulakterfsd/tailwind-html-boilerplate#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
+}
