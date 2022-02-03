@@ -1,15 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/output/main.css">
+<html lang="en" id="theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/output/main.css" />
     <title>TB : tailwind boilerplate by Babulakterfsd</title>
-</head>
-<body class="h-screen flex justify-center items-center">
-    <div class="h-52 w-72 bg-slate-900 text-white p-2 flex justify-center items-center rounded-lg shadow-md font-bold text-2xl">
-        Hello tailwind !
+  </head>
+  <body class="dark:bg-black">
+    <img
+      src="./assets/images/pic_bulbon.gif"
+      alt="bulb"
+      class="block mx-auto rotate-180 py-6"
+      id="bulb"
+    />
+    <div class="h-full flex justify-center items-center">
+      <div
+        class="h-52 w-72 bg-slate-900 text-white dark:bg-slate-500 dark:text-black p-2 rounded-lg shadow-md font-bold text-2xl text-center"
+      >
+        <div class="mt-16">Hello tailwind !</div>
+        <div class="flex justify-evenly">
+          <button class="btn btn-yellow" id="light">Light Theme</button>
+          <button class="btn btn-green" id="dark">Dark Theme</button>
+        </div>
+      </div>
     </div>
-</body>
+
+    <script>
+      const theme = document.getElementById("theme");
+      const light = document.getElementById("light");
+      const bulb = document.getElementById("bulb");
+      const dark = document.getElementById("dark");
+
+      light.addEventListener("click", () => {
+        theme.classList.remove("dark");
+        theme.classList.add("light");
+        bulb.src = "./assets/images/pic_bulbon.gif";
+      });
+
+      dark.addEventListener("click", () => {
+        theme.classList.remove("light");
+        theme.classList.add("dark");
+        bulb.src = "./assets/images/pic_bulboff.gif";
+      });
+    </script>
+  </body>
 </html>
