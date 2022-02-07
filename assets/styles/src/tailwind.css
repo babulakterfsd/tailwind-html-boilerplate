@@ -2,12 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-    @apply text-sm font-bold px-2 py-1 rounded-md mt-4 
+/* imported fonts will be placed right below */
+
+
+
+@layer base {
+    /* tomodify base styles of tailwind 
+     h1 {
+        @apply text-2xl
+    } */
 }
-.btn-yellow {
-   @apply text-white hover:text-slate-700 outline outline-offset-1 outline-1 outline-yellow-400 hover:bg-yellow-400 hover:outline-offset-0 dark:text-black dark:hover:text-slate-600
+
+@layer components {
+    /* to add custom components */
+  .btn {
+    @apply text-sm font-bold px-2 rounded-md py-1 mt-4;
+  }
+  .btn-yellow {
+    @apply text-white hover:text-slate-700 outline outline-offset-1 outline-1 outline-yellow-400 hover:bg-yellow-400 hover:outline-offset-0 dark:text-black dark:hover:text-slate-600;
+  }
+  .btn-green {
+    @apply text-white outline outline-offset-1 outline-1 outline-green-400 hover:bg-green-400 hover:outline-offset-0 dark:text-black dark:hover:text-slate-600;
+  }
 }
-.btn-green {
-    @apply text-white outline outline-offset-1 outline-1 outline-green-400 hover:bg-green-400 hover:outline-offset-0 dark:text-black dark:hover:text-slate-600
+
+@layer utilities {
+    /* we can add custom utility class in this layer */
+    .space-100 {
+      margin: 400px;
+    }
 }
+
+/* to add variants like hover, focus or such things on our custom classes, we must keep them in the specific variant, either it won't work */
+
+@variants focus, hover {
+  
+}
+
+
+
+/* ----------- for high customized responsiveness ------------ */
+.main-container {
+  @apply w-full mx-auto;
+}
+@media (min-width: 576px) {
+  .main-container {
+    max-width: 540px !important;
+  }
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 720px !important;
+  }
+}
+@media (min-width: 992px) {
+  .main-container {
+    max-width: 970px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1170px !important;
+  }
+  .userImg {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  .main-container {
+    max-width: 1320px !important;
+  }
+}
+
+
+/* ------------ custom css if needed -------------- */
