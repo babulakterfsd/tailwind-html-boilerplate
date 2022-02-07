@@ -641,9 +641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /* to add variants like hover, focus or such things on our custom classes, we must keep them in the specific variant, either it won't work */
 
-@variants focus, hover {
-}
-
 /* ----------- for high customized responsiveness ------------ */
 
 .main-container {
@@ -687,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 /* ------------ custom css if needed -------------- */
+
+.hover\:rotate-40:hover {
+  transform: skewY(0deg)
+}
 
 .dark .dark\:bg-black {
   --tw-bg-opacity: 1;
